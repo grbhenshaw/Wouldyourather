@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Would You Rather</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: #f0f0f0;
+        }
+        #question {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #playButton {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="question">Press the Play button to see a question!</div>
+    <button id="playButton">Play</button>
+
+    <script>
+        var questions = [
+            "Would you rather have a pet dinosaur or a pet dragon?",
+            "Would you rather be able to fly whenever you burp or be invisible whenever you sneeze?",
+            "Would you rather have hands for feet or feet for hands?",
+            "Would you rather eat spaghetti for breakfast every day or have to eat cereal for dinner every night?",
+            "Would you rather have to sing everything you say or dance all your movements?",
+            "Would you rather have a bathtub filled with marshmallows or a backyard filled with bounce houses?",
+            "Would you rather only be able to whisper or only be able to shout?",
+            "Would you rather have a permanent unicorn horn or a permanent mermaid tail?",
+            "Would you rather be a super fast runner or a super high jumper?",
+            "Would you rather always have to wear clown shoes or a clown wig?",
+            "Would you rather have your clothes always two sizes too big or one size too small?",
+            "Would you rather have a pet cloud that rains candy or a pet tree that grows toys?",
+            "Would you rather have a constant popcorn popping sound in your ears or always smell like popcorn?",
+            "Would you rather sneeze confetti or fart glitter?",
+            "Would you rather sweat maple syrup or cry lemonade?",
+            "Would you rather be able to speak to animals or have animals understand you, but you can't understand them?",
+            "Would you rather have pizza for hair or spaghetti for arms?",
+            "Would you rather be a human-sized ant or an ant-sized human?",
+            "Would you rather always have to wear a superhero cape or a cowboy hat?",
+            "Would you rather have a head the size of a tennis ball or the size of a watermelon?"
+        ];
+
+        document.getElementById('playButton').onclick = function() {
+            var randomIndex = Math.floor(Math.random() * questions.length);
+            document.getElementById('question').textContent = questions[randomIndex];
+        }
+    </script>
+</body>
+</html>
