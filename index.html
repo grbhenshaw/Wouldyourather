@@ -40,63 +40,95 @@
         <label for="younger">Younger</label>
         <input type="radio" id="older" name="ageGroup">
         <label for="older">Older</label>
+        <input type="radio" id="adult" name="ageGroup">
+        <label for="adult">Adult (clean)</label>
     </div>
 
     <script>
         var questionsYounger = [
             // The list of questions for younger kids
             "Would you rather have the ability to teleport or to read minds?",
-            "Would you rather have an unlimited amount of chips or candy?",
-            "Would you rather have a pet dinosaur or a pet alien?",
-            "Would you rather always have to wear clown shoes or a clown wig?",
-            "Would you rather have a personal life-sized robot or a jetpack?",
-            "Would you rather be an incredibly famous actor/actress or the President of the United States?",
-            "Would you rather have your dream job or a billion dollars?",
-            "Would you rather live without TV or music?",
-            "Would you rather own an amusement park or a zoo?",
-            "Would you rather have the ability to become invisible or to fly?",
-            "Would you rather always have to sing rather than speak or dance everywhere you go?",
-            "Would you rather be the funniest person in class or the smartest?",
-            "Would you rather visit outer space or the bottom of the ocean?",
-            "Would you rather have a time machine or a magic wand?",
-            "Would you rather be able to talk to animals or speak all human languages?",
-            "Would you rather be the star player on a losing basketball team or ride the bench on a winning one?",
-            "Would you rather spend the day at an amusement park or lazing on the beach?",
-            "Would you rather be able to create a new holiday or create a new language?",
-            "Would you rather be the teacher at your school for a day or the principal?",
-            "Would you rather have a permanent smile or a permanent wink?",
+"Would you rather have an unlimited amount of chips or candy?",
+"Would you rather have a pet dinosaur or a pet alien?",
+"Would you rather always have to wear clown shoes or a clown wig?",
+"Would you rather have a personal life-sized robot or a jetpack?",
+"Would you rather be an incredibly famous actor/actress or the President of the United States?",
+"Would you rather have your dream job or a billion dollars?",
+"Would you rather live without TV or music?",
+"Would you rather own an amusement park or a zoo?",
+"Would you rather have the ability to become invisible or to fly?",
+"Would you rather always have to sing rather than speak or dance everywhere you go?",
+"Would you rather be the funniest person in class or the smartest?",
+"Would you rather visit outer space or the bottom of the ocean?",
+"Would you rather have a time machine or a magic wand?",
+"Would you rather be able to talk to animals or speak all human languages?",
+"Would you rather be the star player on a losing basketball team or ride the bench on a winning one?",
+"Would you rather spend the day at an amusement park or lazing on the beach?",
+"Would you rather be able to create a new holiday or create a new language?",
+"Would you rather be the teacher at your school for a day or the principal?",
+"Would you rather have a permanent smile or a permanent wink?",
         ];
 
         var questionsOlder = [
             // The list of questions for older kids
             "Would you rather have to announce to everyone around you whenever you have to fart or pee your pants daily?",
-            "Would you rather always have to talk in third person or never be able to call someone by their name?",
-            "Would you rather have your head the size of a watermelon or the size of a tennis ball?",
-            "Would you rather have legs as long as your fingers or fingers as long as your legs?",
-            "Would you rather have a nose that grows when you tell a lie, like Pinocchio, or have steam come out of your ears when you're angry, like a cartoon?",
-            "Would you rather always have to enter rooms by announcing your name or always have to do cartwheels out?",
-            "Would you rather always have a song stuck in your head or always have an itch that you can’t reach?",
-            "Would you rather have unlimited love or unlimited money?",
-            "Would you rather have a rewind button for your life or a pause button for your life?",
-            "Would you rather always have to speak in rhyme or mime everything?",
-            "Would you rather have free Wi-Fi wherever you go or free coffee where/whenever you want?",
-            "Would you rather be fluent in all languages or be a master of every musical instrument?",
-            "Would you rather only be able to whisper or only be able to shout?",
-            "Would you rather live in a world where there were no problems, or live in a world where you rule?",
-            "Would you rather live in the Harry Potter universe or the Pokemon universe?",
-            "Would you rather have unlimited sushi for life or unlimited tacos for life?",
-            "Would you rather give up bathing for a month or give up the internet for a month?",
-            "Would you rather be in detention for the rest of your school life or be grounded for the rest of your school life?",
-            "Would you rather be able to control fire or water?",
-            "Would you rather always smell like onions or always smell like garlic?",
+"Would you rather always have to talk in third person or never be able to call someone by their name?",
+"Would you rather have your head the size of a watermelon or the size of a tennis ball?",
+"Would you rather have legs as long as your fingers or fingers as long as your legs?",
+"Would you rather have a nose that grows when you tell a lie, like Pinocchio, or have steam come out of your ears when you're angry, like a cartoon?",
+"Would you rather always have to enter rooms by announcing your name or always have to do cartwheels out?",
+"Would you rather always have a song stuck in your head or always have an itch that you can’t reach?",
+"Would you rather have unlimited love or unlimited money?",
+"Would you rather have a rewind button for your life or a pause button for your life?",
+"Would you rather always have to speak in rhyme or mime everything?",
+"Would you rather have free Wi-Fi wherever you go or free coffee where/whenever you want?",
+"Would you rather be fluent in all languages or be a master of every musical instrument?",
+"Would you rather only be able to whisper or only be able to shout?",
+"Would you rather live in a world where there were no problems, or live in a world where you rule?",
+"Would you rather live in the Harry Potter universe or the Pokemon universe?",
+"Would you rather have unlimited sushi for life or unlimited tacos for life?",
+"Would you rather give up bathing for a month or give up the internet for a month?",
+"Would you rather be in detention for the rest of your school life or be grounded for the rest of your school life?",
+"Would you rather be able to control fire or water?",
+"Would you rather always smell like onions or always smell like garlic?",
+        ];
+
+        var questionsAdult = [
+            // The list of questions for adults
+            "Would you rather be trapped in an elevator full of men with BO or three soaked dogs?",
+"Would you rather always have to say what's on your mind or never be able to speak again?",
+"Would you rather be itchy for the rest of your life or be sticky for the rest of your life?",
+"Would you rather have hiccups for the rest of your life or always feel like you have to sneeze, but not be able to?",
+"Would you rather always have to tell the truth or always lie?",
+"Would you rather have your flight delayed by 8 hours or lose your luggage?",
+"Would you rather only be able to use a fork (no spoon) or only be able to use a spoon (no fork)?",
+"Would you rather be on a survival reality show or dating game show?",
+"Would you rather be too busy or be bored?",
+"Would you rather watch the big game at home or live at the stadium?",
+"Would you rather spend the night in a luxury hotel room or camping surrounded by beautiful scenery?",
+"Would you rather always be 20 minutes late for important events or always be 2 hours early to everything else?",
+"Would you rather have a personal chef or a maid?",
+"Would you rather be a kid your whole life or an adult your whole life?",
+"Would you rather go back to age 5 with everything you know now or know now everything your future self will learn?",
+"Would you rather relive the same day for 365 days or lose a year of your life?",
+"Would you rather have a golden voice or a silver tongue?",
+"Would you rather spend the rest of your life with a sailboat as your home or an RV as your home?",
+"Would you rather be able to talk to land animals, animals that fly, or animals that live under the water?",
+"Would you rather have all traffic lights you approach be green or never have to stand in line again?",
         ];
 
         document.getElementById('playButton').onclick = function() {
-            var questionBank = document.getElementById('older').checked ? questionsOlder : questionsYounger;
+            var questionBank;
+            if (document.getElementById('older').checked) {
+                questionBank = questionsOlder;
+            } else if (document.getElementById('adult').checked) {
+                questionBank = questionsAdult;
+            } else {
+                questionBank = questionsYounger;
+            }
             var randomIndex = Math.floor(Math.random() * questionBank.length);
             document.getElementById('question').textContent = questionBank[randomIndex];
         }
     </script>
 </body>
 </html>
-
